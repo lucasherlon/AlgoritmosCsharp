@@ -1,4 +1,5 @@
 ﻿using algoritmos;
+
 class Algoritmos
 {
     static void Main(string[] args)
@@ -13,7 +14,15 @@ class Algoritmos
 
         // Testing two crystal balls
         bool[] points = { false, false, false, false, false, false, false, false, false, false, false, false, false, true, true, true, true, true, true };
-        int result = SearchAlgorithms.twoCrystalBalls(points);
+        int result = SearchAlgorithms.TwoCrystalBalls(points);
         Console.WriteLine($"The crystall ball strats to break in the position {result}");
+        
+        // Testing bubble sort
+        int[] array3 = { 12, 80, 34, 22, 89, 43, 55, 92, 57, 8, 31, 19, 14, 23, 31, 76, 88, 41 };
+        Sorting.BubbleSort(array3);
+        foreach (int item in array3)
+        {
+            Console.Write($"{item} ");
+        }
     }
 }

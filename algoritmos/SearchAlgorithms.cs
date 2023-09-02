@@ -44,7 +44,7 @@ internal class SearchAlgorithms
         Console.WriteLine($"Number {number} not found");
     }
 
-    public static int twoCrystalBalls(bool[] points)
+    public static int TwoCrystalBalls(bool[] points)
     {
         int stepLength = (int) Math.Floor(Math.Sqrt(points.Length));
 
