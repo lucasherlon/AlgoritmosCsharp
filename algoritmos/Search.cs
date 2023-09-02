@@ -1,7 +1,7 @@
 ﻿
 namespace algoritmos;
 
-internal class SearchAlgorithms
+internal class Search
 {
     public static void LinearSearch(int[] array, int number)
     {
