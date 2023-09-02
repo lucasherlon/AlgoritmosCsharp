@@ -45,7 +45,26 @@ public class SearchAlgorithms
 
     public static int twoCrystalBalls(bool[] points)
     {
-        int stepLength = (int) Math.Sqrt(points.Length);
+        int stepLength = (int) Math.Floor(Math.Sqrt(points.Length));
 
+        int i = stepLength;
+        for (; i < points.Length; i += stepLength)
+        {
+            if (points[i])
+            {
+                break;
+            }
+        }
+
+        i -= stepLength;
+        for (int j = 0; j < stepLength && i < points.Length; ++j, ++i)
+        {
+            if (points[i])
+            {
+                return i;
+            }
+           
+        }
+        return -1;
     }
 }
