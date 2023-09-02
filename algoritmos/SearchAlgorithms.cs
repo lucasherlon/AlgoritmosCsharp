@@ -1,7 +1,7 @@
 ﻿
 namespace algoritmos;
 
-public class SearchAlgorithms
+internal class SearchAlgorithms
 {
     public static void LinearSearch(int[] array, int number)
     {
@@ -26,6 +26,7 @@ public class SearchAlgorithms
             if (array[middle] == number)
             {
                 Console.WriteLine($"Number {number} found");
+                return;
 
             }
             else if (array[middle] < number)
