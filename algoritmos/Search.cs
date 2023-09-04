@@ -1,5 +1,4 @@
-﻿
-namespace algoritmos;
+﻿namespace algoritmos;
 
 internal class Search
 {
