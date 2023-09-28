@@ -1,6 +1,4 @@
 ﻿
-using System.Drawing;
-
 namespace algoritmos.estruturas.Stack
 {
     internal class Stack
@@ -39,6 +37,7 @@ namespace algoritmos.estruturas.Stack
 
             int value = _top.Value;
             _top = _top.Next;
+            _size--;
 
             return value;
         }
@@ -55,7 +54,12 @@ namespace algoritmos.estruturas.Stack
 
         public bool IsEmpty()
         {
-            return _top == null;
+            return _size == 0;
+        }
+
+        public int Size()
+        {
+            return _size;
         }
 
     }

@@ -1,5 +1,4 @@
-﻿
-namespace algoritmos.estruturas.Queue
+﻿namespace algoritmos.estruturas
 {
     internal class Node
     {
