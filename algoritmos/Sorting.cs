@@ -27,7 +27,7 @@ internal class Sorting
     {
         if (left < right)
         {
-            int pivot = Partition(array, left, right);
+            int pivot = partition(array, left, right);
 
             if (pivot > 1)
             {
@@ -40,7 +40,7 @@ internal class Sorting
         }
     }
 
-    public static int Partition(int[] array, int left, int right)
+    private static int partition(int[] array, int left, int right)
     {
         int pivot = array[left];
 
@@ -83,11 +83,11 @@ internal class Sorting
             MergeSort(array, left, middle);
             MergeSort(array, middle + 1, right);
 
-            Merge(array, left, middle, right);
+            merge(array, left, middle, right);
         }
     }
 
-    public static void Merge(int[] array, int left, int middle, int right)
+    private static void merge(int[] array, int left, int middle, int right)
     {
         int[] temp = new int[right - left + 1];
         int i, j, k;
