@@ -72,6 +72,83 @@ internal class Sorting
                 return right;
             }
         }
-    }   
+    }
+
+    public static void MergeSort(int[] array, int left, int right)
+    {
+        if (left < right)
+        {
+            int middle = (left + right) / 2;
+
+            MergeSort(array, left, middle);
+            MergeSort(array, middle + 1, right);
+
+            Merge(array, left, middle, right);
+        }
+    }
+
+    public static void Merge(int[] array, int left, int middle, int right)
+    {
+        int[] temp = new int[right - left + 1];
+        int i, j, k;
+        i = left;
+        j = middle + 1;
+        k = 0;
+
+        while (i <= middle && j <= right)
+        {
+            if (array[i] < array[j])
+            {
+                temp[k] = array[i];
+                k++;
+                i++;
+            }
+            else
+            {
+                temp[k] = array[j];
+                k++;
+                j++;
+            }
+        }
+
+        while (i <= middle)
+        {
+            temp[k] = array[i];
+            k++;
+            i++;
+        }
+
+        while (j <= right)
+        {
+            temp[k] = array[j];
+            k++;
+            j++;
+        }
+
+        for (i = left; i <= right; i++)
+        {
+            array[i] = temp[i - left];
+        }
+    }
+
+    public static void InsertionSort(int[] array)
+    {
+        int n = array.Length;
+
+        for (int i = 1; i < n; ++i)
+        {
+            int key = array[i];
+            int j = i - 1;
+
+            while (j >= 0 && array[j] > key)
+            {
+                array[j + 1] = array[j];
+                j = j - 1;
+            }
+
+            array[j + 1] = key;
+        }
+    }
+
 
 }
